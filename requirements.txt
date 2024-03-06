@@ -1,0 +1,6 @@
+arcgis
+dotenv
+langchain
+langchain-community==0.0.19
+langchain-openai
+langfuse
