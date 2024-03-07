@@ -6,7 +6,7 @@ Created by Andrew Turner @ Esri for DevSummit 2024
 
 ### Environment variables
 
-1. Copy .env.example to .env.dev
+1. Copy `env.example` to `.env.dev`
 2. Add your relevant keys & URLs to the configuration
 
 ### Python
