@@ -1,0 +1,22 @@
+{
+  "name": "example-arcgis-langchain-js",
+  "version": "0.1.0",
+  "description": "Example of using LangChain JS with ArcGIS",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "run": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Turner <aturner@esri.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.525.0",
+    "dotenv": "^16.4.5",
+    "langchain": "0.1.25"
+  }
+}

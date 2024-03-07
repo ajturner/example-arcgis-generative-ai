@@ -4,11 +4,19 @@ Created by Andrew Turner @ Esri for DevSummit 2024
 
 ## Getting Started
 
-1. Install requirements in console `pip install -U -r requirements.txt`
-2. Open `example_start.ipynb`
-3. Run the cells
+### Python
 
-This is a simple introduction
+1. Change to `cd langchain-py`
+2. Install requirements in console `pip install -U -r requirements.txt`
+3. Open `example_start.ipynb`
+4. Run the cells
+
+### Javascript
+
+1. Change to `cd langchain-js`
+2. Install requirements in console `npm i`
+3. Run the example `node example_start.js`
+
 
 ## Using Tools
 
