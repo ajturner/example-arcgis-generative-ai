@@ -2,6 +2,8 @@ This project is a simple introduction to using Langchain with ArcGIS.
 
 Created by Andrew Turner @ Esri for DevSummit 2024
 
+[Slides](https://esriis-my.sharepoint.com/:p:/g/personal/andr7059_esri_com/ERydBirgxSRDhi-CW8_DvSsB0PL9OwH1Q6gH7HypJsNlnQ?e=0rRchp)
+
 ## Getting Started
 
 ### Environment variables
