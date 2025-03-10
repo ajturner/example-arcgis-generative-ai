@@ -24,8 +24,10 @@ const tools = [
         schema: z.object({
             address: z.string().describe("The location name or street address")
         }),
-        func: async ({ address }) =>
-            geocodeLocation(address)
+        func: async ({ address }) => {
+            console.log("Calling Geocoder")
+            return await geocodeLocation(address)
+        }
     }),
 ];
 
@@ -55,48 +57,14 @@ const agentExecutor = new AgentExecutor({
   verbose: true,
 });
   
-const result = await agentExecutor.invoke({
-  input: `Where are Esri's headquarters?`,
+let query = `Where is Redlands, CA?`;
+const response = await agentExecutor.invoke({
+  input: query,
 })
 
-console.log(result)
 
-// import { convertToOpenAIFunction } from "@langchain/core/utils/function_calling";
-
-// import { RunnableSequence } from "@langchain/core/runnables";
-// import { AgentExecutor } from "langchain/agents";
-
-// import { formatToOpenAIFunctionMessages } from "langchain/agents/format_scratchpad";
-// import { OpenAIFunctionsAgentOutputParser } from "langchain/agents/openai/output_parser";
-// // import { geocodeLocation } from "./tools/geocoder";
-
-// export function geocodeLocation(address) {
-
-//   return [-100, 50];
-// }
-// const tools = [geocodeLocation];
-
-// const modelWithFunctions = model.bind({
-//   functions: tools.map((tool) => convertToOpenAIFunction(tool)),
-// });
-
-
-// const runnableAgent = RunnableSequence.from([
-//   {
-//     input: (i ) => i.input,
-//     agent_scratchpad: (i) =>
-//       formatToOpenAIFunctionMessages(i.steps),
-//   },
-//   prompt,
-//   modelWithFunctions,
-//   new OpenAIFunctionsAgentOutputParser(),
-// ]);
-
-// const executor = AgentExecutor.fromAgentAndTools({
-//   agent: runnableAgent,
-//   tools,
-// });
-
+console.log(`< ${query}`);
+console.log(`> ${response.content}`);
 
 
 

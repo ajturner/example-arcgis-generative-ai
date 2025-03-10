@@ -9,13 +9,17 @@
     "node": ">=18"
   },
   "scripts": {
-    "run": "node index.js",
+    "demo": "node example_start.js",
+    "tools": "node example_tools.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andrew Turner <aturner@esri.com>",
   "license": "Apache-2.0",
   "dependencies": {
     "@aws-sdk/client-bedrock-runtime": "^3.525.0",
+    "@esri/arcgis-rest-geocoding": "^4.0.2",
+    "@langchain/core": "^0.3.15",
+    "@langchain/openai": "^0.3.11",
     "dotenv": "^16.4.5",
     "langchain": "0.1.25"
   }

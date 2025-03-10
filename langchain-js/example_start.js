@@ -12,6 +12,8 @@ const model = new ChatOpenAI({
   modelName: process.env.OPENAI_MODEL_NAME
 });
 
-const response = await model.invoke("what is Esri?");
+let query = "what is Esri?"
+const response = await model.invoke(query);
 
-console.log(response);
+console.log(`< ${query}`);
+console.log(`> ${response.content}`);
